@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 
-export default class CustomText extends Component {
+class CustomText extends Component {
   render() {
     let props = this.props;
     let styles = {
@@ -20,3 +20,5 @@ export default class CustomText extends Component {
     );
   }
 }
+
+export { CustomText };

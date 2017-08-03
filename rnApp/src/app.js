@@ -4,7 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
-import Icon from './components-core/Icon';
+import { Icon } from './components/common';
 
 export default class rnApp extends Component {
   render() {

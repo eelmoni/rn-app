@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import style from './style';
 
-export default class Header extends Component {
+class Header extends Component {
   render() {
     let permutations = {
       withImage: this.renderHeaderWithImage,
@@ -37,3 +37,5 @@ export default class Header extends Component {
     );
   }
 }
+
+export { Header };

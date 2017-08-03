@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 
-export default class Icon extends Component {
+class Icon extends Component {
 
     render() {
       let props = this.props;
@@ -10,3 +10,5 @@ export default class Icon extends Component {
       return <Component margin={0} padding={0} {...props} />;
     }
 }
+
+export { Icon };
