@@ -11,16 +11,28 @@ import {
   Header
 } from './components/common';
 import SearchBox from './components/SearchBox';
+import HotelsListContainer from './components/HotelsList/container';
 
 export default class rnApp extends Component {
+  state = {
+    hotelsCount: null
+  };
+
+  componentWillMount() {
+    this.setState({
+      hotelsCount: store.getState().hotels.length
+    });
+  }
+
   render() {
     return (
       <Provider store={store}>
         <View style={styles.container}>
           <Header permutation="withShadow">
-            <CustomText>Elegí tu hotel (489)</CustomText>
+            <CustomText>{`Elegí tu hotel (${this.state.hotelsCount})`}</CustomText>
           </Header>
           <SearchBox />
+          <HotelsListContainer />
         </View>
       </Provider>
     );

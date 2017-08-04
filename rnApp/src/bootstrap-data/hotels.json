@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Deauville Beach Resort",
+    "stars": 5,
+    "service": "room",
+    "pricePerNight": 1240,
+    "currency": "ARS",
+    "image": "https://unsplash.it/500/500/"
+  },
+  {
+    "id": 2,
+    "name": "Hamptons Inn & Suites Miami",
+    "stars": 4,
+    "service": "breakfast",
+    "pricePerNight": 2222,
+    "currency": "ARS",
+    "image": "https://unsplash.it/500/500/"
+  },
+  {
+    "id": 3,
+    "name": "Hotel Cabana Miami Beach Luxury & Excellency",
+    "stars": 5,
+    "service": "room",
+    "pricePerNight": 3949,
+    "currency": "ARS",
+    "image": "https://unsplash.it/500/500/"
+  }
+]
