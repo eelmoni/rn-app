@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
       height: 2
     },
     elevation: 2,
-    position: 'relative'
+    position: 'relative',
+    marginBottom: 8
   }
 });
 

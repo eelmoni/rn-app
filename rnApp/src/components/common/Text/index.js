@@ -1,23 +1,30 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
 class CustomText extends Component {
   render() {
-    let props = this.props;
-    let styles = {
-      ...props.style,
-      fontFamily: 'Arial'
-    };
-    let textProps = {
-      ...props,
-      style: styles
-    };
+    let style = this.getStyle(this.props.style || {});
 
     return (
-      <Text {...textProps}>
+      <Text {...this.props} style={style}>
         {this.props.children}
       </Text>
     );
+  }
+
+  getStyle(style) {
+    let styles = StyleSheet.flatten(style);
+    let fontFamilyStyle = StyleSheet.create({
+      propStyle: {
+        ...styles
+      },
+      customFontFamily: {
+        fontFamily: 'Roboto'
+      }
+    });
+    let newStyle = StyleSheet.flatten([fontFamilyStyle.propStyle, fontFamilyStyle.customFontFamily]);
+
+    return newStyle;
   }
 }
 

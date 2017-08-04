@@ -4,18 +4,39 @@ import {
   Text,
   View
 } from 'react-native';
-import { Icon } from './components/common';
+import firebase from 'firebase';
+import {
+  Icon,
+  CustomText,
+  Header
+} from './components/common';
+import SearchBox from './components/SearchBox';
 
 export default class rnApp extends Component {
+  componentWillMount() {
+    firebase.initializeApp({
+      apiKey:           'AIzaSyDxj86WauofCa_D6ZY1etNgo4N1MSAeeTo',
+      authDomain:       'rnapp-bb3cf.firebaseapp.com',
+      databaseURL:      'https://rnapp-bb3cf.firebaseio.com',
+      projectId:        'rnapp-bb3cf',
+      storageBucket:    'rnapp-bb3cf.appspot.com',
+      messagingSenderId:'357231618011'
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
+        <Header permutation="withShadow">
+          <CustomText>Elegí tu hotel (489)</CustomText>
+        </Header>
+        <SearchBox />
+        <CustomText style={styles.welcome}>
           Welcome to React Native App!
-        </Text>
-        <Text style={styles.instructions}>
+        </CustomText>
+        <CustomText style={styles.instructions}>
           Choose an option:
-        </Text>
+        </CustomText>
         <Icon
           name="apple"
           color="#de2626"
@@ -28,7 +49,7 @@ export default class rnApp extends Component {
           padding={10}
           width={150}
           type="button">
-          <Text>Run the app</Text>
+          <CustomText>Run the app</CustomText>
         </Icon>
         <Icon
           name="book"
@@ -42,7 +63,7 @@ export default class rnApp extends Component {
           margin={10}
           width={150}
           type="button">
-          <Text>Run storybook</Text>
+          <CustomText>Run storybook</CustomText>
         </Icon>
       </View>
     );
@@ -52,9 +73,7 @@ export default class rnApp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#EEEEEE'
   },
   welcome: {
     fontSize: 20,
