@@ -1,14 +1,8 @@
+import { FIRST_ACTION } from './types';
 
-const FIRST_ACTION = 'FIRST_ACTION';
-
-function firstAction(firstAction) {
+export const firstAction = (firstAction) => {
   return {
     type: FIRST_ACTION,
-    firstAction
+    payload: firstAction
   };
 }
-
-export {
-  FIRST_ACTION,
-  firstAction
-};

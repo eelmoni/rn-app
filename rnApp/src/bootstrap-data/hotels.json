@@ -6,7 +6,7 @@
     "service": "room",
     "pricePerNight": 1240,
     "currency": "ARS",
-    "image": "https://unsplash.it/500/500/"
+    "image": "https://images.trvl-media.com/media/content/expus/graphics/launch/hotel1320x742.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "service": "breakfast",
     "pricePerNight": 2222,
     "currency": "ARS",
-    "image": "https://unsplash.it/500/500/"
+    "image": "https://images.trvl-media.com/media/content/expus/graphics/launch/hotel1320x742.jpg"
   },
   {
     "id": 3,
@@ -24,6 +24,6 @@
     "service": "room",
     "pricePerNight": 3949,
     "currency": "ARS",
-    "image": "https://unsplash.it/500/500/"
+    "image": "https://images.trvl-media.com/media/content/expus/graphics/launch/hotel1320x742.jpg"
   }
 ]

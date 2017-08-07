@@ -1,4 +1,4 @@
-import { FIRST_ACTION } from '../actions';
+import { FIRST_ACTION } from '../actions/types';
 
 const initialState = {};
 const firstReducer = (state = initialState, action) => {
